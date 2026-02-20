@@ -1,12 +1,3 @@
-<p align="center">
-  <a href="https://vibecaas.com">
-    <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="Nellie Code logo">
-    </picture>
-  </a>
-</p>
 <p align="center">Nellie Code by VibeCaaS: local-first AI coding with cloud fallback.</p>
 <p align="center">
   <a href="https://vibecaas.com/discord"><img alt="Discord" src="https://img.shields.io/badge/discord-vibecaas-5865F2?style=flat-square" /></a>
