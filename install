@@ -65,7 +65,25 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-INSTALL_DIR=$HOME/.nellie-code/bin
+# Install dir priority:
+# 1) NELLIE_CODE_INSTALL_DIR
+# 2) OPENCODE_INSTALL_DIR (legacy compatibility)
+# 3) XDG_BIN_DIR
+# 4) $HOME/bin
+# 5) $HOME/.nellie-code/bin
+if [[ -n "${NELLIE_CODE_INSTALL_DIR:-}" ]]; then
+    INSTALL_DIR="$NELLIE_CODE_INSTALL_DIR"
+elif [[ -n "${OPENCODE_INSTALL_DIR:-}" ]]; then
+    INSTALL_DIR="$OPENCODE_INSTALL_DIR"
+    echo -e "${ORANGE}Using legacy OPENCODE_INSTALL_DIR; prefer NELLIE_CODE_INSTALL_DIR.${NC}" >&2
+elif [[ -n "${XDG_BIN_DIR:-}" ]]; then
+    INSTALL_DIR="$XDG_BIN_DIR"
+elif [[ -d "$HOME/bin" ]] || mkdir -p "$HOME/bin" 2>/dev/null; then
+    INSTALL_DIR="$HOME/bin"
+else
+    INSTALL_DIR="$HOME/.nellie-code/bin"
+fi
+
 mkdir -p "$INSTALL_DIR"
 
 # If --binary is provided, skip all download/detection logic

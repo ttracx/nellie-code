@@ -1,4 +1,4 @@
-# Mintlify Starter Kit
+# Nellie Code Documentation
 
 Use the starter kit to get your docs deployed and ready to customize.
 
@@ -42,3 +42,5 @@ Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/sett
 ### Resources
 
 - [Mintlify documentation](https://mintlify.com/docs)
+
+© 2026 Nellie Code powered by VibeCaaS.com a division of NeuralQuantum.ai LLC. All rights reserved.

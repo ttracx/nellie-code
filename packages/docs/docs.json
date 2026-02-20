@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "@opencode-ai/docs",
+  "name": "Nellie Code Docs",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -44,10 +44,11 @@
     "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp", "cursor", "vscode"]
   },
   "footer": {
+    "copyright": "© 2026 Nellie Code powered by VibeCaaS.com a division of NeuralQuantum.ai LLC. All rights reserved.",
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/vibecaas",
+      "github": "https://github.com/ttracx/nellie-code",
+      "linkedin": "https://linkedin.com/company/neuralquantum-ai"
     }
   }
 }
