@@ -1,0 +1,71 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "vllm/meta-llama/Llama-3.1-8B-Instruct",
+  "small_model": "ollama/qwen3-coder-next:cloud",
+  "provider": {
+    "vllm": {
+      "options": {
+        "baseURL": "http://127.0.0.1:8001/v1",
+        "apiKey": "local-dev"
+      },
+      "models": {
+        "meta-llama/Llama-3.1-8B-Instruct": {
+          "name": "Llama 3.1 8B Instruct (local GPU)",
+          "limit": { "context": 8192, "output": 4096 }
+        }
+      }
+    },
+    "ollama": {
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1",
+        "apiKey": "ollama-local"
+      },
+      "models": {
+        "qwen3-coder-next:cloud": {
+          "name": "Qwen3 Coder Next (Cloud Fallback)",
+          "limit": { "context": 131072, "output": 16384 }
+        },
+        "glm-5:cloud": {
+          "name": "GLM-5 (Reasoning)",
+          "limit": { "context": 198000, "output": 16384 }
+        }
+      }
+    },
+    "anthropic": {
+      "models": {
+        "claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6",
+          "limit": { "context": 1000000, "output": 64000 }
+        },
+        "claude-opus-4-6": {
+          "name": "Claude Opus 4.6",
+          "limit": { "context": 1000000, "output": 64000 }
+        }
+      }
+    },
+    "openai": {
+      "models": {
+        "o3": {
+          "name": "OpenAI o3",
+          "limit": { "context": 200000, "output": 100000 }
+        }
+      }
+    }
+  },
+  "agent": {
+    "build": {
+      "model": "vllm/meta-llama/Llama-3.1-8B-Instruct",
+      "mode": "primary",
+      "description": "Primary local model for iterative coding"
+    },
+    "plan": {
+      "model": "anthropic/claude-sonnet-4-6",
+      "mode": "primary",
+      "description": "Cloud reasoning fallback for complex planning"
+    },
+    "summary": {
+      "model": "ollama/qwen3-coder-next:cloud",
+      "mode": "all"
+    }
+  }
+}

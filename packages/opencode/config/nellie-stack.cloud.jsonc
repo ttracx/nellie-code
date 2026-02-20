@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/qwen3-coder-next:cloud",
+  "small_model": "ollama/glm-5:cloud",
+  "provider": {
+    "ollama": {
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1",
+        "apiKey": "ollama-local"
+      }
+    },
+    "anthropic": {
+      "models": {
+        "claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6"
+        },
+        "claude-opus-4-6": {
+          "name": "Claude Opus 4.6"
+        }
+      }
+    },
+    "openai": {
+      "models": {
+        "o3": {
+          "name": "OpenAI o3"
+        }
+      }
+    }
+  },
+  "agent": {
+    "build": {
+      "model": "ollama/qwen3-coder-next:cloud",
+      "mode": "primary"
+    },
+    "plan": {
+      "model": "anthropic/claude-sonnet-4-6",
+      "mode": "primary"
+    }
+  }
+}
