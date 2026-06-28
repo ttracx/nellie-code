@@ -135,3 +135,29 @@ It's very similar to Claude Code in terms of capability. Here are the key differ
 **Join our community** [Discord](https://vibecaas.com/discord) | [X.com](https://x.com/vibecaas)
 
 © 2026 Nellie Code powered by VibeCaaS.com a division of NeuralQuantum.ai LLC. All rights reserved.
+
+<!-- THOX-DOCS-STANDARD:START -->
+## Repository Description
+
+THOX.ai LLC repository for nellie code, including project documentation, release readiness, and legal baseline.
+
+## Documentation
+
+- [Repository documentation](docs/README.md)
+- [Security policy](SECURITY.md)
+- [Contributing guide](CONTRIBUTING.md)
+- [Legal notice](NOTICE.md)
+
+## THOX.ai LLC
+
+This repository is maintained by THOX.ai LLC.
+
+- Tommy Xaypanya is CTO.
+- Craig Ross is CEO.
+
+## Copyright and Legal
+
+Copyright (c) 2026 THOX.ai LLC. All rights reserved unless this repository includes a separate license file that states otherwise.
+
+THOX-specific documentation, configuration, branding, product definitions, and integration work are owned by THOX.ai LLC unless explicitly noted. Third-party dependencies, forks, vendored components, and upstream source materials remain governed by their original licenses and notices.
+<!-- THOX-DOCS-STANDARD:END -->
