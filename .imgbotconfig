@@ -1,0 +1,6 @@
+{
+  "exclusions": [
+    "packages/**",
+    "sdks/**"
+  ]
+}
